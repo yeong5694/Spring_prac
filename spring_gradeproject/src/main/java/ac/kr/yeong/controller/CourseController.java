@@ -8,7 +8,7 @@ public class CourseController {
 	
 	@RequestMapping("/courseSearch")
 	public void courseSearch() {
+		//prac-branch
 		
-	
 	}
 }
