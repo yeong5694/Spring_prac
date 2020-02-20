@@ -8,10 +8,11 @@
 </head>
 <body>
 	<h3>Login 화면</h3>
-	<form method="post" action="${pageContext.request.contextPath}/courseSearch">
-	id : <input type="text", id="username" name="username"> <br>
-	password : <input type="password" id="password" name="password"> <br>
 	
-	<input type="button" value="확인">
+	<form method="get" action="${pageContext.request.contextPath}/courseSearch">
+	id : <input type="text", id="id" name="id"> <br>
+	password : <input type="password" id="password" name="password"> <br>
+	<input type="submit" value="확인">
+	</form>
 </body>
 </html>
