@@ -9,9 +9,10 @@
 <body>
 	<h3>Login 화면</h3>
 	
-	<form method="get" action="${pageContext.request.contextPath}/courseSearch">
+	<form method="post" action="${pageContext.request.contextPath}/course">
 	id : <input type="text", id="id" name="id"> <br>
 	password : <input type="password" id="password" name="password"> <br>
+	
 	<input type="submit" value="확인">
 	</form>
 </body>

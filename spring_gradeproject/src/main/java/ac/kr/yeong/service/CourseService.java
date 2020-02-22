@@ -13,7 +13,11 @@ public class CourseService {
 	@Autowired
 	private CourseDao courseDao;
 	
-	public List<Course> searchCourses(String id){
-		return courseDao.getCourses(id);
+	public List<Course> getCourses(){
+		return courseDao.getCourses();
+	}
+	
+	public void insert(Course course){
+		courseDao.insert(course);
 	}
 }

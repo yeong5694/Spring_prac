@@ -24,5 +24,6 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<a href="${pageContext.request.contextPath }/insertView">수강신청하기</a>
 </body>
 </html>

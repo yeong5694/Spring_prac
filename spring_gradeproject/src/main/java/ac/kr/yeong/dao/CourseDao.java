@@ -22,7 +22,7 @@ public class CourseDao {
 		jdbcTemplate=new JdbcTemplate(dataSource);
 	}
 	
-	public List<Course> getCourses(String id){
+	public List<Course> getCourses(){
 		String sqlStatement="select *from course"; //나중에 id 추가하기
 		return jdbcTemplate.query(sqlStatement,  new RowMapper<Course>() {
 
@@ -40,5 +40,19 @@ public class CourseDao {
 			}
 			
 		});
+	}
+	
+	public boolean insert(Course course){
+		int year=course.getYear();
+		int semester=course.getSemester();
+		String code=course.getCode();
+		String c_name=course.getC_name();
+		String division=course.getDivision();
+		int point=course.getPoint();
+		String score=course.getScore();
+		
+		String sqlStatement="insert into course(year, semester, code, c_name, division, point, score) values(?,?,?,?,?,?,?)";
+		
+		return (jdbcTemplate.update(sqlStatement, new Object[] { year, semester, code, c_name, division, point, score }) == 1);
 	}
 }
